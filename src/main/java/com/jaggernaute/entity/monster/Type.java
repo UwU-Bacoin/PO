@@ -9,7 +9,7 @@ public enum Type {
         this.name = str;
     }
 
-    public String getTypeName() {
+    public String getName() {
         return this.name;
     }
 }

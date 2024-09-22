@@ -20,7 +20,7 @@ public class Monster extends Entity {
         StringBuilder builder = new StringBuilder();
         StatusLineBuilder lb = new StatusLineBuilder();
         builder.append(lb.lineBuilder("Nom: ", this.getName()))
-                .append(lb.lineBuilder("Role : ", this.getType().getTypeName()))
+                .append(lb.lineBuilder("Role : ", this.getType().getName()))
                 .append(this.isDead() ? "MORT\n" : "PV : " + this.getCurrentHealth() + " / " + this.getMaxHealth() + "\n")
                 .append(lb.lineBuilder("ATK : ", String.valueOf(this.getAttack())))
                 .append(lb.lineBuilder("DEF : ", String.valueOf(this.getDefense())));

@@ -1,7 +1,5 @@
 package com.jaggernaute.entity;
 
-import com.jaggernaute.entity.hero.Role;
-
 public class Entity {
     protected final String name;
     public String getName() {
@@ -50,14 +48,17 @@ public class Entity {
         return this.currentHealth <= 0;
     }
 
-    public int takingDamage(int damages) {
+    public void takeDamage(int damages) {
         if (damages < this.getCurrentHealth())
-            return 0;
+            return;
         if (damages - this.getDefense() >= this.getCurrentHealth()) {
             this.setCurrentHealth(0);
-            return (damages - defense);
+            return;
         }
         this.setCurrentHealth(this.getCurrentHealth() - (damages - this.getDefense()));
-        return (damages - defense);
+    }
+
+    public void dealDamage(Entity target) {
+        target.takeDamage(this.getAttack());
     }
 }

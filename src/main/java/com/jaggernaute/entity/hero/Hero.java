@@ -20,7 +20,7 @@ public class Hero extends Entity {
         StringBuilder builder = new StringBuilder();
         StatusLineBuilder lb = new StatusLineBuilder();
         builder.append(lb.lineBuilder("Nom: ", this.getName()))
-                .append(lb.lineBuilder("Role : ", this.getRole().getRoleName()))
+                .append(lb.lineBuilder("Role : ", this.getRole().getName()))
                 .append(this.isDead() ? "MORT\n" : "PV : " + this.getCurrentHealth() + " / " + this.getMaxHealth() + "\n")
                 .append(lb.lineBuilder("ATK : ", String.valueOf(this.getAttack())))
                 .append(lb.lineBuilder("DEF : ", String.valueOf(this.getDefense())));

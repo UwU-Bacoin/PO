@@ -9,7 +9,7 @@ public enum Job {
         this.name = str;
     }
 
-    public String getJobName() {
+    public String getName() {
         return this.name;
     }
 }
