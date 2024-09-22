@@ -1,6 +1,8 @@
 package com.jaggernaute.entity.monster;
 
-public enum Type {
+import com.jaggernaute.entity.EntityType;
+
+public enum Type implements EntityType {
     ZOMBIE("Zombie"), SKELETON("Skeleton"), SLIME("Slime");
 
     private final String name;

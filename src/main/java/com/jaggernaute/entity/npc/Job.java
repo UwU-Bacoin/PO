@@ -1,6 +1,8 @@
 package com.jaggernaute.entity.npc;
 
-public enum Job {
+import com.jaggernaute.entity.EntityType;
+
+public enum Job implements EntityType {
     FISHERMAN("Fisherman"), LIBRARIAN("Librarian"), BLACKSMITH("Blacksmith");
 
     private final String name;

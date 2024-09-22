@@ -1,6 +1,8 @@
 package com.jaggernaute.entity.hero;
 
-public enum Role {
+import com.jaggernaute.entity.EntityType;
+
+public enum Role implements EntityType {
     HEALER("Healer"), WARLOCK("Warlock"), TANK("Tank");
 
     private final String name;
